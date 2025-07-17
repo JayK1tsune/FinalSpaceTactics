@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="character_resource" load_steps=2 format=3 uid="uid://bvbq3gc0eck7i"]
+
+[ext_resource type="Script" uid="uid://680r3dvriyu1" path="res://Character.gd" id="1_bj3fm"]
+
+[resource]
+script = ExtResource("1_bj3fm")
+movement = 7
+attackDmg = 1
+health = 1
+speed = 50
+spawnNumber = 1

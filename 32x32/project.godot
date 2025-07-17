@@ -1,0 +1,30 @@
+config_version=5
+
+[application]
+
+config/name="FinalSpaceTactics"
+run/main_scene="uid://ccnehuyudlvuj"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://UI/icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
+[dotnet]
+
+project/assembly_name="32x32"
+
+[input]
+
+click={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.000614998, 0.0212829, 0.0966399, 1)
+2d/snap/snap_2d_transforms_to_pixel=true

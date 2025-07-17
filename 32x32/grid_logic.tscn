@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cctaxe6kmfd5g"]
+
+[ext_resource type="Script" uid="uid://cuqgs0ehc2j35" path="res://Character/TileMapLogic.gd" id="1_1nuhn"]
+
+[node name="GridLogic" type="Node"]
+script = ExtResource("1_1nuhn")

@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bln305g7rysne"]
+
+[ext_resource type="Theme" uid="uid://ctr5fy57drmye" path="res://Assets/Themes/UITheme.tres" id="1_3b2b5"]
+[ext_resource type="Script" uid="uid://c80blbkf5bjht" path="res://UI/ui.gd" id="1_b3bc3"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_3b2b5")
+script = ExtResource("1_b3bc3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(-2.195, 0)
+layout_mode = 1
+offset_right = 74.0
+offset_bottom = 31.0
+scale = Vector2(0.555, 0.555)
+theme = ExtResource("1_3b2b5")
+alignment = 1
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_3b2b5")
+text = "2"
+
+[node name="Button6" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "3"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "4"
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "5"
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "6"
+
+[node name="Line2D" type="Line2D" parent="."]

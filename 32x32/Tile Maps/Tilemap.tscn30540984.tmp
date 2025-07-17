@@ -1,0 +1,350 @@
+[gd_scene load_steps=13 format=4 uid="uid://ccnehuyudlvuj"]
+
+[ext_resource type="Texture2D" uid="uid://cigvqsgodgwxe" path="res://Assets/isometric tileset/isometric tileset/spritesheet.png" id="1_bsqp4"]
+[ext_resource type="Script" uid="uid://prikut1iqdgq" path="res://Tile Maps/tilemap.gd" id="1_emjop"]
+[ext_resource type="Texture2D" uid="uid://b773t5f0o6dkh" path="res://Assets/isometric tileset/isometric tileset/separated images/highlight_tile.png" id="3_2kxir"]
+[ext_resource type="Texture2D" uid="uid://b65cyalakg7pd" path="res://Assets/tileset.png" id="4_2kxir"]
+[ext_resource type="PackedScene" uid="uid://cxetbyacj0ayl" path="res://Character/mage.tscn" id="5_x4y4m"]
+[ext_resource type="PackedScene" uid="uid://bln305g7rysne" path="res://UI/UI.tscn" id="6_0gr3w"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_emjop"]
+texture = ExtResource("1_bsqp4")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+8:3/0/texture_origin = Vector2i(0, 10)
+9:3/0 = 0
+9:3/0/texture_origin = Vector2i(0, 10)
+10:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+4:4/0/custom_data_0 = true
+5:4/0 = 0
+5:4/0/custom_data_0 = true
+6:4/0 = 0
+6:4/0/custom_data_0 = true
+7:4/0 = 0
+7:4/0/custom_data_0 = true
+8:4/0 = 0
+8:4/0/custom_data_0 = true
+9:4/0 = 0
+9:4/0/custom_data_0 = true
+10:4/0 = 0
+10:4/0/custom_data_0 = true
+0:5/0 = 0
+0:5/0/custom_data_0 = true
+1:5/0 = 0
+1:5/0/custom_data_0 = true
+2:5/0 = 0
+2:5/0/custom_data_0 = true
+3:5/0 = 0
+3:5/0/custom_data_0 = true
+4:5/0 = 0
+4:5/0/custom_data_0 = true
+5:5/0 = 0
+5:5/0/custom_data_0 = true
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+9:5/0/custom_data_0 = true
+10:5/0 = 0
+10:5/0/custom_data_0 = true
+0:6/0 = 0
+0:6/0/custom_data_0 = true
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+5:6/0/custom_data_0 = true
+6:6/0 = 0
+6:6/0/custom_data_0 = true
+7:6/0 = 0
+7:6/0/custom_data_0 = true
+8:6/0 = 0
+8:6/0/custom_data_0 = true
+9:6/0 = 0
+9:6/0/custom_data_0 = true
+10:6/0 = 0
+10:6/0/custom_data_0 = true
+0:7/0 = 0
+1:7/0 = 0
+1:7/0/custom_data_0 = true
+2:7/0 = 0
+2:7/0/custom_data_0 = true
+3:7/0 = 0
+3:7/0/custom_data_0 = true
+4:7/0 = 0
+4:7/0/custom_data_0 = true
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+0:8/0 = 0
+0:8/0/custom_data_2 = true
+1:8/0 = 0
+1:8/0/custom_data_2 = true
+2:8/0 = 0
+2:8/0/custom_data_2 = true
+3:8/0 = 0
+3:8/0/custom_data_2 = true
+5:8/0 = 0
+5:8/0/custom_data_1 = true
+0:9/0 = 0
+0:9/0/custom_data_2 = true
+1:9/0 = 0
+1:9/0/custom_data_2 = true
+2:9/0 = 0
+2:9/0/custom_data_2 = true
+3:9/0 = 0
+3:9/0/custom_data_2 = true
+4:9/0 = 0
+4:9/0/custom_data_1 = true
+5:9/0 = 0
+5:9/0/texture_origin = Vector2i(0, 8)
+5:9/0/custom_data_1 = true
+6:9/0 = 0
+6:9/0/texture_origin = Vector2i(0, 8)
+6:9/0/custom_data_1 = true
+7:9/0 = 0
+7:9/0/custom_data_1 = true
+8:9/0 = 0
+8:9/0/custom_data_1 = true
+0:10/0 = 0
+0:10/0/custom_data_0 = true
+1:10/0 = 0
+1:10/0/custom_data_0 = true
+2:10/0 = 0
+2:10/0/custom_data_0 = true
+3:10/0 = 0
+3:10/0/custom_data_0 = true
+4:10/0 = 0
+4:10/0/custom_data_0 = true
+5:10/0 = 0
+5:10/0/custom_data_0 = true
+6:10/0 = 0
+6:10/0/custom_data_0 = true
+7:10/0 = 0
+7:10/0/custom_data_0 = true
+8:10/0 = 0
+8:10/0/custom_data_0 = true
+9:10/0 = 0
+9:10/0/custom_data_0 = true
+10:10/0 = 0
+10:10/0/custom_data_0 = true
+4:8/0 = 0
+4:8/0/custom_data_1 = true
+6:8/0 = 0
+6:8/0/custom_data_1 = true
+7:8/0 = 0
+7:8/0/custom_data_1 = true
+8:8/0 = 0
+8:8/0/custom_data_1 = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0gr3w"]
+texture = ExtResource("3_2kxir")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 1)
+0:0/0/modulate = Color(0.160784, 0.2, 0.65098, 0.482353)
+0:0/1 = 1
+0:0/1/texture_origin = Vector2i(0, 1)
+0:0/1/modulate = Color(0.68, 0, 0.0793334, 0.694118)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x4y4m"]
+texture = ExtResource("4_2kxir")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -8)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -8)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -8)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, -8)
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, -6)
+6:0/0 = 0
+6:0/0/texture_origin = Vector2i(0, -6)
+0:1/0 = 0
+0:1/0/texture_origin = Vector2i(0, -2)
+1:1/0 = 0
+1:1/0/texture_origin = Vector2i(0, -2)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, -1)
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, 8)
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, 3)
+2:2/0 = 0
+2:2/0/texture_origin = Vector2i(0, -8)
+0:3/0 = 0
+0:3/0/texture_origin = Vector2i(0, -8)
+0:3/0/custom_data_0 = true
+1:3/0 = 0
+1:3/0/texture_origin = Vector2i(0, -8)
+1:3/0/custom_data_0 = true
+2:3/0 = 0
+2:3/0/texture_origin = Vector2i(0, -8)
+2:3/0/custom_data_0 = true
+3:2/0 = 0
+3:3/0 = 0
+3:3/0/texture_origin = Vector2i(0, -4)
+4:2/0 = 0
+4:2/0/texture_origin = Vector2i(0, -8)
+4:3/0 = 0
+4:3/0/texture_origin = Vector2i(0, -1)
+5:3/0 = 0
+5:3/0/texture_origin = Vector2i(0, -8)
+5:2/0 = 0
+5:2/0/texture_origin = Vector2i(0, 8)
+6:2/0 = 0
+6:2/0/texture_origin = Vector2i(0, -8)
+7:2/0 = 0
+7:2/0/texture_origin = Vector2i(0, -8)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -8)
+0:4/size_in_atlas = Vector2i(1, 3)
+0:4/0 = 0
+0:4/0/texture_origin = Vector2i(0, 25)
+0:4/0/z_index = 3
+0:4/0/custom_data_3 = true
+1:5/size_in_atlas = Vector2i(1, 2)
+1:5/0 = 0
+1:5/0/texture_origin = Vector2i(0, 9)
+1:5/0/z_index = 3
+1:5/0/custom_data_3 = true
+2:4/size_in_atlas = Vector2i(1, 3)
+2:4/0 = 0
+2:4/0/texture_origin = Vector2i(0, 25)
+2:4/0/z_index = 3
+2:4/0/custom_data_3 = true
+3:4/size_in_atlas = Vector2i(1, 3)
+3:4/0 = 0
+3:4/0/texture_origin = Vector2i(0, 25)
+3:4/0/z_index = 3
+3:4/0/custom_data_3 = true
+4:4/size_in_atlas = Vector2i(1, 3)
+4:4/0 = 0
+4:4/0/texture_origin = Vector2i(0, 25)
+4:4/0/z_index = 3
+4:4/0/custom_data_3 = true
+
+[sub_resource type="TileSet" id="TileSet_uvehw"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(32, 16)
+custom_data_layer_0/name = "Hazzard"
+custom_data_layer_0/type = 1
+custom_data_layer_1/name = "DeepWater"
+custom_data_layer_1/type = 1
+custom_data_layer_2/name = "ShallowWater"
+custom_data_layer_2/type = 1
+custom_data_layer_3/name = "Tree"
+custom_data_layer_3/type = 1
+sources/0 = SubResource("TileSetAtlasSource_emjop")
+sources/1 = SubResource("TileSetAtlasSource_0gr3w")
+sources/2 = SubResource("TileSetAtlasSource_x4y4m")
+
+[sub_resource type="Gradient" id="Gradient_emjop"]
+colors = PackedColorArray(0.000614998, 0.0212829, 0.0966399, 1, 0.0858104, 0.316647, 0.478723, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uvehw"]
+gradient = SubResource("Gradient_emjop")
+
+[node name="TileMaps" type="Node2D" node_paths=PackedStringArray("tile_map")]
+script = ExtResource("1_emjop")
+spawn_points = Array[Vector2i]([Vector2i(-4, 4), Vector2i(-4, 3), Vector2i(-4, 2)])
+start_point = Vector2i(4, 4)
+end_point = Vector2i(3, -3)
+deep_water_weight = 9.0
+shallow_water_weight = 6.0
+highlight_color = null
+destination_color = null
+tile_map = NodePath("Base_Layer")
+
+[node name="Base_Layer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD9//3/AgABAAAAAAD9//7/AgABAAAAAAD9////AgABAAAAAAD9/wAAAgAAAAAAAAD9/wEAAgABAAAAAAD9/wIAAgABAAAAAAD9/wMAAgABAAAAAAD+//3/AgABAAAAAAD+//7/AgABAAAAAAD+////AAAGAAgAAAD+/wAAAAAGAAgAAAD+/wEAAAAGAAgAAAD+/wIAAAAGAAgAAAD+/wMAAgABAAAAAAD///3/AgABAAAAAAD///7/AgABAAAAAAD/////AAAGAAgAAAD//wAAAAAGAAgAAAD//wEAAAAGAAgAAAD//wIAAAAGAAgAAAD//wMAAgABAAAAAAAAAP3/AgABAAAAAAAAAP7/AgABAAAAAAAAAP//AAAGAAgAAAAAAAAAAAAGAAgAAAAAAAEAAAAGAAgAAAAAAAIAAAAGAAgAAAAAAAMAAgABAAAAAAABAP3/AgABAAAAAAABAP7/AgAEAAAAAAABAP//AAAGAAgAAAABAAAAAAAGAAgAAAABAAEAAAAGAAgAAAABAAIAAAAGAAgAAAABAAMAAgABAAAAAAACAP3/AgABAAAAAAACAP7/AgABAAAAAAACAP//AgABAAAAAAACAAAAAgABAAAAAAACAAEAAgABAAAAAAACAAIAAgABAAAAAAACAAMAAgAGAAAAAAADAP3/AgAAAAAAAAADAP7/AgABAAAAAAADAP//AgABAAAAAAADAAAAAgABAAAAAAADAAEAAgABAAAAAAADAAIAAgABAAAAAAADAAMAAgABAAAAAAD8//3/AgAGAAAAAAD8//7/AgABAAAAAAD8////AgAAAAAAAAD8/wAAAgABAAAAAAD8/wEAAgABAAAAAAD8/wIAAgABAAAAAAD8/wMAAgABAAAAAAD8/wQAAgAAAAAAAAD9/wQAAgABAAAAAAD+/wQAAgABAAAAAAD//wQAAgABAAAAAAAAAAQAAgABAAAAAAABAAQAAgABAAAAAAACAAQAAgABAAAAAAADAAQAAgABAAAAAAAEAAQAAgACAAMAAAAEAAMAAgACAAMAAAAEAP3/AgACAAMAAAAEAP7/AgACAAMAAAAEAP//AgACAAMAAAAEAAAAAgACAAMAAAAEAAEAAgACAAMAAAAEAAIAAgACAAMAAAD8/wUAAgAAAAMAAAD9/wUAAgAAAAMAAAD+/wUAAgAAAAMAAAD//wUAAgAAAAMAAAAAAAUAAgAAAAMAAAABAAUAAgAAAAMAAAACAAUAAgAAAAMAAAADAAUAAgAAAAMAAAAEAAUAAgABAAMAAAAEAPz/AgAEAAQAAAD7/wcAAgAEAAQAAAAGAAEAAgACAAQAAAABAAcAAgACAAQAAAD7/wIAAgACAAQAAAD8//z/AgABAAUAAAAHAAQAAgABAAUAAAAAAPz/AgAAAAQAAAD+/wgAAgAAAAQAAAA=")
+tile_set = SubResource("TileSet_uvehw")
+
+[node name="Highlight" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_uvehw")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 3.0
+texture = SubResource("GradientTexture1D_uvehw")
+texture_mode = 2
+antialiased = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.045, 3.045)
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Mage" parent="Characters" node_paths=PackedStringArray("wayline") groups=["Mage"] instance=ExtResource("5_x4y4m")]
+z_index = 1
+position = Vector2(-228, -14)
+wayline = NodePath("../../Line2D")
+
+[node name="UI" parent="." instance=ExtResource("6_0gr3w")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -208.0
+offset_top = -116.0
+offset_right = -166.0
+offset_bottom = -96.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="playerClicked" from="Characters/Mage" to="." method="_on_mage_player_clicked"]
+[connection signal="movment_updated" from="UI" to="Characters/Mage" method="_on_ui_movment_updated"]
+
+[editable path="UI"]
