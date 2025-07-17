@@ -20,6 +20,7 @@ var current_tile_map: TileMapLayer
 func _ready():
 	var signalNode: Node2D = get_tree().get_first_node_in_group("TestSignal")
 	signalNode.connect("node2DTouched", _test_clicked)
+	signalNode.connect("node2DExited", _wipe_colour)
 	
 		
 	for child in get_children():
@@ -115,4 +116,7 @@ func _on_player_clicked(character: Character, event: InputEvent) -> void:
 			highlight.set_cell(point, 1, Vector2i(0, 0))	
 
 func _test_clicked():
-	print("Test Singal was clicked!")
+	highlight.set_cell(clicked_tile(),1,Vector2i(0,0),1)
+
+func _wipe_colour():
+	highlight.clear()
