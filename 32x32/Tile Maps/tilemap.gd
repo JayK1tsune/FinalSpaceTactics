@@ -5,7 +5,6 @@ class_name Tile_Map
 @onready var line_2d : Line2D = $UI/Line2D
 @onready var highlight: TileMapLayer = $Highlight
 var players : Array[Character] = []
-
 var astar_grid : AStarGrid2D
 @export var tile_map: TileMapLayer
 @export var spawn_points : Array[Vector2i]
@@ -17,7 +16,12 @@ var astar_grid : AStarGrid2D
 @export var destination_color : Color
 var selected_tile : Vector2i
 var current_tile_map: TileMapLayer
+
 func _ready():
+	var signalNode: Node2D = find_child("test1")
+	signalNode.connect("node2DTouched", _test_clicked)
+	
+		
 	for child in get_children():
 		if child is Character:
 			players.append(child)
@@ -109,3 +113,6 @@ func _on_player_clicked(character: Character, event: InputEvent) -> void:
 		var reachable = current_player.get_reachable_tiles()
 		for point in reachable:
 			highlight.set_cell(point, 1, Vector2i(0, 0))	
+
+func _test_clicked():
+	print("Test Singal was clicked!")

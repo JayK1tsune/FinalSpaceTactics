@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ccnehuyudlvuj"]
+[gd_scene load_steps=16 format=4 uid="uid://ccnehuyudlvuj"]
 
 [ext_resource type="Texture2D" uid="uid://cigvqsgodgwxe" path="res://Assets/isometric tileset/isometric tileset/spritesheet.png" id="1_bsqp4"]
 [ext_resource type="Script" uid="uid://prikut1iqdgq" path="res://Tile Maps/tilemap.gd" id="1_emjop"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cxetbyacj0ayl" path="res://Character/mage.tscn" id="5_x4y4m"]
 [ext_resource type="PackedScene" uid="uid://bln305g7rysne" path="res://UI/UI.tscn" id="6_0gr3w"]
 [ext_resource type="Resource" uid="uid://qfihq2u8tbdg" path="res://Resources/mage1.tres" id="6_utri0"]
+[ext_resource type="Script" uid="uid://bg5kdo3k7i3ow" path="res://Tile Maps/SignalTest.gd" id="8_lycng"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_emjop"]
 texture = ExtResource("1_bsqp4")
@@ -298,6 +299,8 @@ colors = PackedColorArray(0.000614998, 0.0212829, 0.0966399, 1, 0.0858104, 0.316
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_uvehw"]
 gradient = SubResource("Gradient_emjop")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_30otc"]
+
 [node name="TileMaps" type="Node2D" node_paths=PackedStringArray("tile_map")]
 script = ExtResource("1_emjop")
 tile_map = NodePath("Base_Layer")
@@ -344,6 +347,17 @@ grow_vertical = 1
 [node name="Line2D" parent="UI" index="1"]
 width = 3.0
 joint_mode = 1
+
+[node name="test1" type="Node2D" parent="." groups=["TestSignal"]]
+position = Vector2(1, 64)
+script = ExtResource("8_lycng")
+
+[node name="Area2D" type="Area2D" parent="test1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test1/Area2D"]
+shape = SubResource("CircleShape2D_30otc")
+
+[connection signal="input_event" from="test1/Area2D" to="test1" method="_on_area_2d_input_event"]
 
 [editable path="Character2"]
 [editable path="Character"]
