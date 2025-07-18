@@ -27,5 +27,6 @@ func _on_area_2d_mouse_exited() -> void:
 	
 func _secondSignalpop():
 	print("Second Signal Sent")
+	print("Doing this for Github")
 		
 	
