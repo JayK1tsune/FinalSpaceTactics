@@ -15,6 +15,11 @@ var spawn_number : int :
 	get:
 		return resource.spawnNumber
 
+func _ready() -> void:
+	var ui := get_tree().get_first_node_in_group("ui_control")
+	if ui:
+		ui.movement_updated.connect(_on_ui_movment_updated)
+		
 
 
 func update_animation(direction: Vector2) -> void:
@@ -36,8 +41,9 @@ func update_animation(direction: Vector2) -> void:
 
 func _on_ui_movment_updated(value: Variant) -> void:
 	print(value)
+	resource.movement = value
+	movementRange = value
 	tileLogic.tileMap.highlight.clear()
-	tileLogic.character.movementRange = value
 
 
 func _on_texture_rect_gui_input(event: InputEvent) -> void:

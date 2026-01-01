@@ -18,9 +18,9 @@ var selected_tile : Vector2i
 var current_tile_map: TileMapLayer
 
 func _ready():
-	var signalNode: Node2D = get_tree().get_first_node_in_group("TestSignal")
-	signalNode.connect("node2DTouched", _test_clicked)
-	signalNode.connect("node2DExited", _wipe_colour)
+	#var signalNode: Node2D = get_tree().get_first_node_in_group("TestSignal")
+	#signalNode.connect("node2DTouched", _test_clicked)
+	#signalNode.connect("node2DExited", _wipe_colour)
 	
 		
 	for child in get_children():
